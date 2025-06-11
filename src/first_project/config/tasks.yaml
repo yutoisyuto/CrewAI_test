@@ -1,17 +1,65 @@
+executive_task:
+  description: >
+    {topic}の内容を理解して、プロジェクトの全体像を把握し、他の専門エージェントに指示を出し、進行をまとめる。
+    タスクの優先順位付けやスケジュール管理を行い、プロジェクトを成功に導いてください。
+  expected_output: >
+    プロジェクトの進行状況をまとめたレポート。
+  agent: executive_assistant
+
 research_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
+    {topic}について徹底的な調査を行う
+    現在の年が{current_year}であることを考慮して、興味深く関連性のある情報を見つけるようにしてください。
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
+    {topic}に関する最も関連性の高い情報を10個の箇条書きでまとめたリスト
   agent: researcher
 
 reporting_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    得たコンテキストを確認し、各トピックをレポートの完全なセクションに拡張する。
+    レポートが詳細で、関連する情報をすべて含むようにしてください。
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
+    主なトピックごとに完全な情報セクションを含む完全なレポート。
+    マークダウン形式で、'```'は使用しない。
   agent: reporting_analyst
+
+excel_task:
+  description: >
+    数値データを収集し、Excel形式で整理・可視化する。
+    ピボットテーブルやグラフを活用して、データの本質を明確にしてください。
+  expected_output: >
+    整理されたExcelファイルと、データの可視化を含むグラフ。
+  agent: excel_specialist
+
+ppt_task:
+  description: >
+    報告書やプレゼン資料を作成し、視覚的にわかりやすくまとめる。
+    ストーリーテリングと図解を活用して、説得力のある資料を作成してください。
+  expected_output: >
+    完成されたプレゼン資料（PowerPoint形式）。
+  agent: ppt_creator
+
+qa_task:
+  description: >
+    生成物の品質を確認し、改善提案を行う。
+    明確さ、誤字、整合性をチェックしてください。
+  expected_output: >
+    改善提案を含む品質レビュー報告書。
+  agent: qa_reviewer
+
+schedule_task:
+  description: >
+    全エージェントとタスクのスケジュールを調整し、進捗を確認する。
+    ガントチャートやToDoリストを活用して、効率的なタイムマネジメントを行ってください。
+  expected_output: >
+    スケジュール調整結果と進捗確認レポート。
+  agent: scheduler
+
+communication_task:
+  description: >
+    社内外とのメール連絡や会議調整を代行する。
+    候補日提示、返信文作成、リマインドを迅速かつ正確に行ってください。
+  expected_output: >
+    連絡履歴と会議調整結果。
+  agent: communication_assistant
+

@@ -18,7 +18,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'AI LLMs',
+        'topic': '会議設定をしてほしい',
         'current_year': str(datetime.now().year)
     }
     
@@ -33,7 +33,7 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        "topic": "AI LLMs",
+        "topic": "プロジェクトの進行状況をまとめてほしい",
         'current_year': str(datetime.now().year)
     }
     try:
@@ -57,7 +57,7 @@ def test():
     Test the crew execution and returns the results.
     """
     inputs = {
-        "topic": "AI LLMs",
+        "topic": "プロジェクトの進行状況をまとめてほしい",
         "current_year": str(datetime.now().year)
     }
     
